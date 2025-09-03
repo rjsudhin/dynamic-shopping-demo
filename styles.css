@@ -23,6 +23,8 @@ body {
   margin: 1rem 0;
   display: flex;
   gap: 1rem;
+  flex-wrap: wrap;
+  padding: 1rem;
 }
 
 .input-container p {
@@ -44,4 +46,5 @@ body {
   color: white;
   border-radius: .5rem;
   border: none;
+  min-height: 35px;
 }
