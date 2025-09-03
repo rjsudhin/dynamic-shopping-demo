@@ -36,6 +36,7 @@ function creatingWishList(item) {
   deleteButton.addEventListener('click', removeCurrentItem)
   li.append(span, deleteButton)
   menu.appendChild(li)
+  checkingWishListCount()
 }
 
 
@@ -47,4 +48,20 @@ function removeCurrentItem(e) {
   let parentElement = button.parentNode
   // remove the current wish list element
   menu.removeChild(parentElement)
+
+  // when any item removed in less the the limit count it will be adding for next inventory
+  if (menu.childElementCount < 5) {
+    addItemBtn.disabled = false
+    userInput.disabled = false
+    userInput.focus()
+  }
+}
+
+// checking the wish list's count and added limit to add new inventory
+function checkingWishListCount() {
+  console.log(menu.childElementCount)
+  if (menu.childElementCount >= 5) {
+    addItemBtn.disabled = true
+    userInput.disabled = true
+  }
 }

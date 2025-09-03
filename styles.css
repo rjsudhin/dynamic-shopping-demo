@@ -53,7 +53,7 @@ body {
   width: 100%;
   max-width: 500px;
   margin: 0 auto;
-  padding: 1rem 2.5rem;
+  padding: 1rem 1rem;
 }
 
 #menu {
@@ -61,8 +61,8 @@ body {
   li {
     display: flex;
     justify-content: space-between;
-    padding: 1rem 1rem;
     list-style-type: circle;
+    margin: .5rem 0;
     gap: 1rem;
   }
   .wish-item {
